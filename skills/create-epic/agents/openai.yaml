@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create Epic"
+  short_description: "Create epic requirements and scenarios"
+  default_prompt: "Use $create-epic to turn this clarified work into epic requirements and scenario docs."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Handover"
+  short_description: "Send focused work to another Herdr agent"
+  default_prompt: "Use $handover to send this task to the backend Herdr pane with the right context."

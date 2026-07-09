@@ -1,0 +1,4 @@
+interface:
+  display_name: "Gather Requirements"
+  short_description: "Interview before any docs are created"
+  default_prompt: "Use $gather-requirements to clarify this idea before choosing whether to create an epic or task."

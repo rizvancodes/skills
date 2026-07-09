@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create Task"
+  short_description: "Create a compact task brief"
+  default_prompt: "Use $create-task to turn this clarified work into a compact task brief."

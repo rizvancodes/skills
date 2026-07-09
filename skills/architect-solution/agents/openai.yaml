@@ -1,0 +1,4 @@
+interface:
+  display_name: "Architect Solution"
+  short_description: "Create solution architecture for an epic"
+  default_prompt: "Use $architect-solution to turn this approved epic into an architecture doc before planning."

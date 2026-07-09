@@ -1,0 +1,4 @@
+interface:
+  display_name: "Functional Test"
+  short_description: "Generate and run functional test cases"
+  default_prompt: "Use $functional-test to create functional cases and execute them with Chrome DevTools MCP."
