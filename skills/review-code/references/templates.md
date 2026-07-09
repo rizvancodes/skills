@@ -1,6 +1,6 @@
 # Review Code Templates
 
-Use these templates when `review-code` reaches Phase 3 or Phase 5.
+Use these templates when `review-code` reaches Phase 3, Phase 4, or Phase 5.
 
 ## Contents
 
