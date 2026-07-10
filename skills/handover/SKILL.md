@@ -62,7 +62,9 @@ This skill does not create a workflow pipeline. It only transfers a focused unit
 ## Handover Format
 
 ```md
-HANDOVER
+TASK CONTEXT
+
+Use this brief to perform the task in this session. Do not hand it over again unless the user explicitly asks.
 
 Destination:
 - Workspace/project:
