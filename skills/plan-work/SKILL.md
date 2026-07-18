@@ -186,6 +186,11 @@ default to backend/frontend.
     library/API/framework/runtime behaviour not already verified in the source artifact, verify
     against official docs or add a task-level verification gate.
 
+    If the approved architecture, model, brief, or project rules name an installed technical skill
+    whose guidance is required during implementation, carry its exact skill ID into only the
+    matching task Context blocks. Do not copy the skill body into the plan and do not attach every
+    available technical skill to every task.
+
 ### 3. Validate Before Decomposition
 
 13. Resolve open questions that affect task shape or ordering before writing tasks. Ask one

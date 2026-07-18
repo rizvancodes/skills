@@ -51,6 +51,13 @@ done
 
 Restart Codex after installing new skills.
 
+Standalone installation provides the workflow skills only. Technical guidance is resolved through
+installed skill dependencies when available. The `agent-skills` registry supplies and pins the
+recommended dependencies, including `codebase-design`, `api-and-interface-design`,
+`frontend-ui-engineering`, `deprecation-and-migration`, `security-and-hardening`,
+`observability-and-instrumentation`, `postgresql-table-design`,
+`supabase-postgres-best-practices`, and `performance`.
+
 ## Workflow Docs
 
 The workflow overview lives under:
@@ -105,5 +112,4 @@ skills/
     references/
 references/
   ATTRIBUTIONS.md
-  guides/
 ```

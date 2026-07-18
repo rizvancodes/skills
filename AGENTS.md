@@ -55,10 +55,11 @@ skill.
 
 ## References
 
-- `references/*.md` contains reusable checklists and general technical references.
-- `references/guides/**/*.md` contains longer technical guides that workflow skills can load when
-  relevant.
-- Third-party attribution and license notices live in `references/ATTRIBUTIONS.md`.
+- Skill-local `references/` directories contain workflow-specific templates and adapted contracts.
+- Generic technical guidance comes from installed skill dependencies named at point of use; do not
+  copy upstream skill bodies into this repository.
+- Third-party attribution and license notices for retained adaptations live in
+  `references/ATTRIBUTIONS.md`.
 
 ## Skill Editing
 
