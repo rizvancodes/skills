@@ -233,9 +233,11 @@ For ad hoc diffs, write a review artifact only if the user asks or a work item i
     request. Project rules override the heuristic baseline. Heuristics are judgement calls, not
     automatic violations, and should be reported only with concrete file/hunk evidence.
 
-    If the executed plan or task Context blocks name installed technical skill dependencies, load
-    only those relevant to the changed files and use them as generic quality guidance. Project
-    rules, accepted ADRs, and the source contract remain authoritative when they conflict.
+    If the executed plan or task Context blocks name source-qualified technical skill dependencies,
+    load only those relevant to the changed files. Use the exact installed skill when available;
+    otherwise retrieve it for this review with `npx skills use <owner/repo@skill>`. Use the result as
+    generic quality guidance. Project rules, accepted ADRs, and the source contract remain
+    authoritative when they conflict.
 
 13. Read relevant changed files and nearby code as needed to understand the diff.
 

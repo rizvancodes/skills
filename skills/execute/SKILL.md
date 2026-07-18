@@ -236,9 +236,11 @@ For each task in plan-backed mode, or once for the direct execution unit:
    - Plan-backed mode: read and trust the task's Context block.
    - Direct mode: use the execution contract plus the smallest relevant owning sources, rules,
      code, and tests.
-   - If that context names an installed technical skill dependency, load the exact skill at this
-     point before implementing. Do not preload unrelated skills or substitute a similarly named
-     skill.
+   - If that context names a source-qualified technical skill dependency, load the exact installed
+     skill when available. Otherwise retrieve it for the current task with
+     `npx skills use <owner/repo@skill>` and follow the returned instructions before implementing.
+     Do not preload unrelated skills, persistently install one without user approval, or substitute
+     a similarly named skill.
 
 2. Read only task-local files needed for implementation.
    Prefer `rg` for search. Do not reload broad project context unless the selected contract is stale

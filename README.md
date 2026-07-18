@@ -19,44 +19,50 @@ Personal Codex skills.
 - `freeze-knowledge` — promote stable runtime knowledge into durable docs.
 - `finish-work` — close a task or epic with completion evidence.
 
-## Install
+## Use And Install
 
-Install one skill into Codex from this repo with the Codex skill installer:
-
-```sh
-python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
-  --repo rizvancodes/skills \
-  --path skills/handover
-```
-
-Install all Herdr helper skills:
+List the available skills without installing them:
 
 ```sh
-for skill in handover; do
-  python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
-    --repo rizvancodes/skills \
-    --path "skills/$skill"
-done
+npx skills add rizvancodes/skills --list
 ```
 
-Install all workflow skills:
+Load one skill for a single task without adding it to the persistent skill catalog:
 
 ```sh
-for skill in open-session gather-requirements create-epic create-task architect-solution spike plan-work execute review-code functional-test checkpoint freeze-knowledge finish-work; do
-  python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
-    --repo rizvancodes/skills \
-    --path "skills/$skill"
-done
+npx skills use rizvancodes/skills@plan-work
 ```
 
-Restart Codex after installing new skills.
+Install selected skills globally for supported agents:
 
-Standalone installation provides the workflow skills only. Technical guidance is resolved through
-installed skill dependencies when available. The `agent-skills` registry supplies and pins the
-recommended dependencies, including `codebase-design`, `api-and-interface-design`,
-`frontend-ui-engineering`, `deprecation-and-migration`, `security-and-hardening`,
-`observability-and-instrumentation`, `postgresql-table-design`,
-`supabase-postgres-best-practices`, and `performance`.
+```sh
+npx skills add rizvancodes/skills \
+  --skill plan-work \
+  --skill execute \
+  --skill review-code \
+  --agent claude-code \
+  --agent codex \
+  --agent kimi-code-cli \
+  --agent opencode \
+  --global \
+  --yes
+```
+
+Workflow skills use source-qualified references for optional technical guidance. This lets an
+agent load a dependency directly from its upstream source without requiring a separate registry or
+persistent installation:
+
+| Domain | Skill reference |
+| --- | --- |
+| Module seams, interface depth, and testability | `mattpocock/skills@codebase-design` |
+| API and public interface design | `addyosmani/agent-skills@api-and-interface-design` |
+| Frontend architecture and UI engineering | `addyosmani/agent-skills@frontend-ui-engineering` |
+| Compatibility, migration, and rollout | `addyosmani/agent-skills@deprecation-and-migration` |
+| Security, privacy, permissions, and tenancy | `addyosmani/agent-skills@security-and-hardening` |
+| Observability and instrumentation | `addyosmani/agent-skills@observability-and-instrumentation` |
+| PostgreSQL schema design | `wshobson/agents@postgresql-table-design` |
+| Supabase/PostgreSQL performance and RLS | `supabase/agent-skills@supabase-postgres-best-practices` |
+| Web performance | `addyosmani/web-quality-skills@performance` |
 
 ## Workflow Docs
 

@@ -56,8 +56,10 @@ skill.
 ## References
 
 - Skill-local `references/` directories contain workflow-specific templates and adapted contracts.
-- Generic technical guidance comes from installed skill dependencies named at point of use; do not
-  copy upstream skill bodies into this repository.
+- Generic technical guidance comes from source-qualified skill references named at point of use,
+  using `owner/repo@skill`. Load an installed skill when available; otherwise retrieve it for the
+  current task with `npx skills use <owner/repo@skill>`. Do not copy upstream skill bodies into this
+  repository.
 - Third-party attribution and license notices for retained adaptations live in
   `references/ATTRIBUTIONS.md`.
 

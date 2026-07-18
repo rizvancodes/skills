@@ -157,22 +157,27 @@ For each relevant domain, load the best available guidance in this order:
 4. relevant installed skills or references when available
 5. official docs for current libraries, frameworks, APIs, or platforms
 
-When available, prefer these installed skill dependencies over copied generic guidance:
+When available, prefer these source-qualified skill dependencies over copied generic guidance:
 
-- module seams, interface depth, or testability: `codebase-design`
-- API or public interface design: `api-and-interface-design`
-- frontend architecture or UI engineering: `frontend-ui-engineering`
-- compatibility, migration, or rollout: `deprecation-and-migration`
-- security, privacy, permissions, or tenancy: `security-and-hardening`
-- observability or instrumentation: `observability-and-instrumentation`
-- PostgreSQL schema design: `postgresql-table-design`
-- Supabase/PostgreSQL performance and RLS: `supabase-postgres-best-practices`
-- performance-sensitive design: `performance`
+- module seams, interface depth, or testability: `mattpocock/skills@codebase-design`
+- API or public interface design: `addyosmani/agent-skills@api-and-interface-design`
+- frontend architecture or UI engineering: `addyosmani/agent-skills@frontend-ui-engineering`
+- compatibility, migration, or rollout: `addyosmani/agent-skills@deprecation-and-migration`
+- security, privacy, permissions, or tenancy: `addyosmani/agent-skills@security-and-hardening`
+- observability or instrumentation: `addyosmani/agent-skills@observability-and-instrumentation`
+- PostgreSQL schema design: `wshobson/agents@postgresql-table-design`
+- Supabase/PostgreSQL performance and RLS:
+  `supabase/agent-skills@supabase-postgres-best-practices`
+- performance-sensitive design: `addyosmani/web-quality-skills@performance`
+
+Load an installed matching skill when available. Otherwise retrieve it for the current task with
+`npx skills use <owner/repo@skill>` and follow the returned instructions without persistently
+installing it.
 
 Load only skills that match the current architecture domains. Treat project rules and accepted
-ADRs as higher authority when they conflict with generic technical guidance. Record any skill ID
-whose guidance materially shapes the architecture in `Plan Inputs` so downstream planning can
-carry that dependency to the relevant execution tasks.
+ADRs as higher authority when they conflict with generic technical guidance. Record any complete
+source-qualified skill reference whose guidance materially shapes the architecture in `Plan
+Inputs` so downstream planning can carry that dependency to the relevant execution tasks.
 
 Do not import generic rules into this skill. If no domain guidance exists, state the gap in
 `Open Architecture Questions` or `Plan Inputs` rather than pretending a generic rule is project law.
