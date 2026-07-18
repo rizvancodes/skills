@@ -12,7 +12,7 @@ Personal Codex skills.
 - `architect-solution` — turn approved requirements into architecture and model artifacts.
 - `spike` — run focused discovery for one blocking uncertainty.
 - `plan-work` — turn an approved artifact into execution-ready plans with task context.
-- `execute` — run one approved task plan or epic phase.
+- `execute` — implement one clear bounded change directly or run an approved task plan or epic phase.
 - `review-code` — review completed work against the plan, artifact, rules, and diff.
 - `functional-test` — create functional cases and execute a runtime verification pass.
 - `checkpoint` — save durable workflow state at a session boundary.

@@ -38,6 +38,9 @@ open-session
 ```
 
 `checkpoint` can happen at any session boundary. `finish-work` is the terminal close step.
+For one clear, bounded implementation request, `execute` can also be entered directly without
+creating a task brief or plan. Use `plan-work` when accepted work needs durable decomposition,
+sequencing, or coordination.
 
 ## Skill Map
 
@@ -50,7 +53,7 @@ open-session
 | `architect-solution` | Designing the technical shape for an approved epic before planning | `architecture.md` and optional `models/*.md` |
 | `spike` | One uncertainty blocks artifact creation, architecture, or planning | Evidence-backed findings for the paused workflow |
 | `plan-work` | An approved brief, requirements, or architecture artifact needs executable tasks | `plan.md`, plan index, or phase files |
-| `execute` | Running one approved task plan or epic phase | Code changes, verification evidence, commits |
+| `execute` | Implementing one clear bounded change directly, or running an approved task plan or epic phase | Code changes, verification evidence, commits |
 | `review-code` | Completed implementation needs fresh review before merge/finish | `review.md` or `reviews/phase-N.md` |
 | `functional-test` | Completed behavior needs a runtime functional pass | `functional-tests/cases.md` and `functional-tests/runs/<run-id>.md` |
 | `freeze-knowledge` | Stable language, domain facts, decisions, or rules should survive the runtime docs | `LANGUAGE.md`, `DOMAIN.md`, ADRs, or rules |

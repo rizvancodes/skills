@@ -208,13 +208,13 @@ plan-work
   verification commands into per-task Context blocks.
 
 execute
-  Executes one approved plan unit: a task plan or epic phase.
-  Trusts per-task Context blocks, keeps scope tight, verifies before claims, classifies failures,
-  and stops after a slim self-review.
+  Implements one clear bounded change directly, or executes one approved task plan or epic phase.
+  Uses a plan Context block or lightweight direct execution contract, keeps scope tight, verifies
+  before claims, classifies failures, and stops after a slim self-review.
 
 review-code
   Fresh code review for completed execution work or ad hoc diffs.
-  Judges the diff against the executed plan, source artifact, project rules, optional durable
+  Judges the diff against the available plan or source artifact, project rules, optional durable
   language/domain docs, quality heuristics when useful, and actual code.
 
 functional-test
@@ -274,7 +274,8 @@ plan-work
 - "What this is not"
 - Source-checkable validation
 - Scope decomposition
-- No implementation before accepted shape/plan
+- No implementation before a clear accepted execution contract; require a durable plan when
+  decomposition, sequencing, coordination, or unresolved implementation decisions need one
 - Runtime packets for execution
 - Checkpoints
 - Fresh review

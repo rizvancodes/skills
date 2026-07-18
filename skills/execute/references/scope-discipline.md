@@ -11,7 +11,7 @@ Touch only what the current task requires.
 - Clean up adjacent code because you noticed it.
 - Refactor imports in files you are not modifying.
 - Remove comments you do not fully understand.
-- Add features not in the plan because they seem useful.
+- Add features outside the current execution contract because they seem useful.
 - Modernize syntax in files you are only reading.
 - Build abstractions before the third use case demands them.
 - Create utility files for one-time operations.
@@ -29,7 +29,7 @@ After writing code, check:
 - Can this be done in fewer lines?
 - Are these abstractions earning their complexity?
 - Would a senior engineer ask why this was not simpler?
-- Am I building for the current task or a hypothetical future requirement?
+- Am I building for the current execution contract or a hypothetical future requirement?
 
 Three similar lines of code are better than a premature abstraction.
 
