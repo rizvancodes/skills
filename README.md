@@ -4,6 +4,7 @@ Personal Codex skills.
 
 ## Included Skills
 
+- `system-design` — map a whole product at the system level before code, one agreed step at a time.
 - `handover` — send a focused task handover to another Herdr pane, workspace, project, worktree, or branch.
 - `open-session` — load or resume task or epic workflow state.
 - `gather-requirements` — interview the user and clarify requirements without writing artifacts.
@@ -78,6 +79,9 @@ docs/workflow-skills/
 docs/
   workflow-skills/
 skills/
+  system-design/
+    SKILL.md
+    references/
   handover/
     SKILL.md
     agents/openai.yaml
